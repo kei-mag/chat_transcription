@@ -71,45 +71,48 @@ class _MainPageState extends State<MainPage> {
         title: Text("会話文字起こしへようこそ！"),
       ),
       body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Container(
-              alignment: Alignment.topLeft,
-              margin: EdgeInsets.all(50),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                spacing: 10,
-                children: [
-                  Text("Q. これは何ができるソフトですか？",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  Text(
-                      "A. このアプリを使うと対面での日常会話を文字起こしすることができます。話し声が聞き取りにくい方が会話内容の文字起こしを見ることで会話により参加しやすくなることを目的としています。"),
-                  Text("Q. このアプリは無料で使えますか？",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  Text("A. はい。このアプリはデバイスの音声認識機能を利用しているため料金はかかりません。"),
-                  Text("Q. どうやって使うのですか？",
-                      style: TextStyle(fontWeight: FontWeight.bold)),
-                  Text("A. 会話を始める前に下のボタンを押してください。画面が切り替わったら会話を始めると文字起こしされます。"),
-                ],
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                alignment: Alignment.topLeft,
+                margin: EdgeInsets.all(50),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  spacing: 10,
+                  children: [
+                    Text("Q. これは何ができるソフトですか？",
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text(
+                        "A. このアプリを使うと対面での日常会話を文字起こしすることができます。話し声が聞き取りにくい方が会話内容の文字起こしを見ることで会話により参加しやすくなることを目的としています。"),
+                    Text("Q. このアプリは無料で使えますか？",
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text("A. はい。このアプリはデバイスの音声認識機能を利用しているため料金はかかりません。"),
+                    Text("Q. どうやって使うのですか？",
+                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text(
+                        "A. 会話を始める前に下のボタンを押してください。画面が切り替わったら会話を始めると文字起こしされます。"),
+                  ],
+                ),
               ),
-            ),
-            FilledButton(
-              onPressed: _speechEnabled
-                  ? () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) =>
-                              TranscriptionPage(speechToText)))
-                  : null,
-              child: _speechEnabled
-                  ? Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [Icon(Icons.transcribe), Text("会話を始める")],
-                    )
-                  : Text("準備中… しばらくお待ちください"),
-            ),
-          ],
+              FilledButton(
+                onPressed: _speechEnabled
+                    ? () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) =>
+                                TranscriptionPage(speechToText)))
+                    : null,
+                child: _speechEnabled
+                    ? Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [Icon(Icons.transcribe), Text("会話を始める")],
+                      )
+                    : Text("準備中… しばらくお待ちください"),
+              ),
+            ],
+          ),
         ),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
