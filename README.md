@@ -2,9 +2,7 @@
 
 話し声が聞き取りにくい方の日常会話を支援する文字起こしアプリ
 
-![アプリアイコン](assets/app_icons/icon_original.webp)
-Google Playにて公開中です。
-<a href='https://play.google.com/store/apps/details?id=net.keimag.chat_transcription&utm_source=https%3A%2F%2Fgithub.com%2Fkei-mag%2Fchat_transcription&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.eps'/></a>
+<img src="assets/app_icons/icon_original.webp" alt="アプリアイコン" width=45%> &emsp; <a href='https://play.google.com/store/apps/details?id=net.keimag.chat_transcription&utm_source=https%3A%2F%2Fgithub.com%2Fkei-mag%2Fchat_transcription&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Google Play で手に入れよう' src='https://play.google.com/intl/en_us/badges/static/images/badges/ja_badge_web_generic.png' width=45%/>
 
 - シンプルなUI
 - 選べるテキスト認識方式
